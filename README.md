@@ -4,18 +4,29 @@
 
 #### Working as a part-time student in a small BPO office with two departments, you are tasked by the senior IT admin to logically segment the switch in each department into different LANs. You must trunk the switches to another switch that is directly connected to the company router, then enable communication between those different LANs to allow people in Department A and B to communicate with one another virtually.
 
-VLAN 10 - Guest
+## Requirements:
 
-VLAN 20 - Reception
+### VLANs (Identical across three Switches):
+> VLAN 10 - Guest
 
-VLAN 30 - Staff
+> VLAN 20 - Reception
 
-VLAN 40 - Security
+> VLAN 30 - Staff
 
-VLAN 50 - Office
+> VLAN 40 - Security
 
-VLAN 60 - Voice (IP Phone)
+> VLAN 50 - Office
 
-VLAN 100 - Native
+> VLAN 60 - Voice (IP Phone)
 
-VLAN 800 - UNUSED (SHUTDOWN)
+> VLAN 100 - Native
+
+> VLAN 800 - UNUSED (SHUTDOWN)
+
+
+### Switch A (SW-A)
+
+### Switch B (SW-B)
+
+### Switch C (SW-C)
+
