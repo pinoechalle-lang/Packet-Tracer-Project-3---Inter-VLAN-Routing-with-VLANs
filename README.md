@@ -7,21 +7,21 @@
 ## Requirements:
 
 ### VLANs (Identical across three Switches):
-> VLAN 10 - Guest
+- VLAN 10 - Guest
 
-> VLAN 20 - Reception
+- VLAN 20 - Reception
 
-> VLAN 30 - Staff
+- VLAN 30 - Staff
 
-> VLAN 40 - Security
+- VLAN 40 - Security
 
-> VLAN 50 - Office
+- VLAN 50 - Office
 
-> VLAN 60 - Voice (IP Phone)
+- VLAN 60 - Voice (IP Phone)
 
-> VLAN 100 - Native
+- VLAN 100 - Native
 
-> VLAN 800 - UNUSED (SHUTDOWN)
+- VLAN 800 - UNUSED (SHUTDOWN)
 
 ---
 ### Switch A (SW-A)
