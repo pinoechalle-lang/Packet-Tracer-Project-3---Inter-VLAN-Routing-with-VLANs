@@ -32,3 +32,5 @@
 ---
 ### Switch C (SW-C)
 
+---
+### Router (R1)
