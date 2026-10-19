@@ -14,3 +14,5 @@ VLAN 40 - Security
 VLAN 50 - Office
 
 VLAN 60 - Voice (IP Phone)
+
+VLAN 800 - UNUSED (SHUTDOWN)
