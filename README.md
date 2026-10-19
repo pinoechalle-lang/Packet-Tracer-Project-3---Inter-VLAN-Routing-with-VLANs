@@ -23,12 +23,12 @@
 
 > VLAN 800 - UNUSED (SHUTDOWN)
 
-<br>
+<p>
 ### Switch A (SW-A)
-<br/>
+</p>
 
 ### Switch B (SW-B)
 
-<br>
+<p>
 ### Switch C (SW-C)
-<br/>
+</p>
