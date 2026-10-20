@@ -28,4 +28,15 @@
 ---
 ### INTERFACES, IPv4 ADDRESSES, SUBNET MASK, DEFAULT GATEWAY:
 
-
+| Switch | Port(s) | Role |
+|--------|---------|------|
+| SW-A | F0/1 | Trunk to SW-B |
+| SW-A | F0/10-F0/14 | Access ports for VLANs 10, 20, 30 |
+| SW-A | F0/2-9, F0/15-24 | Shutdown |
+| SW-C | F0/3 | Trunk to SW-B |
+| SW-C | F0/10-F0/14 | Access ports for VLANs 10, 40, 50/60 |
+| SW-C | F0/1-2, F0/4-9, F0/15-24 | Shutdown |
+| SW-B | G0/1 | Trunk to Router 1 |
+| SW-B | F0/1 | Trunk to SW-A |
+| SW-B | F0/3 | Trunk to SW-C |
+| SW-B | G0/2, F0/2, F0/4-24 | Shutdown |
