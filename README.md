@@ -7,26 +7,22 @@
 ## Requirements:
 
 ### VLANs (Identical across three Switches):
-- VLAN 10 - Guest
 
-- VLAN 20 - Reception
 
-- VLAN 30 - Staff
-
-- VLAN 40 - Security
-
-- VLAN 50 - Office
-
-- VLAN 60 - Voice (IP Phone)
-
-- VLAN 100 - Native
-
-- VLAn 200 - Remote Management
-
-- VLAN 800 - UNUSED (SHUTDOWN)
+| VLAN | Name | Subnet |
+|-------------|-----------|------------|
+| VLAN 10 | Guest | 192.168.10.0 /24 | 
+| VLAN 20 | Reception | 192.168.20.0 /24 | 
+| VLAN 30 | Staff/Maintenance | 192.168.30.0 /24 | 
+| VLAN 40 | Security | 192.168.40.0 /24 | 
+| VLAN 50 | Office | 192.168.50.0 /24 | 
+| VLAN 60 | Voice | 192.168.60.0 /24 | 
+| VLAN 100 | Native | 192.168.100.0 /24 | 
+| VLAN 200 | Remote_Management | 192.168.200.0 /24 |
+| VLAN 800 | UNUSED-SHUTDOWN | |
 
 ---
-### INTERFACES, IPv4 ADDRESSES, SUBNET MASK, DEFAULT GATEWAY:
+### Switch - VLAN Port Assignments
 
 | Switch | Port(s) | Role |
 |--------|---------|------|
@@ -40,3 +36,16 @@
 | SW-B | F0/1 | Trunk to SW-A |
 | SW-B | F0/3 | Trunk to SW-C |
 | SW-B | G0/2, F0/2, F0/4-24 | Shutdown |
+
+### Router: VLAN Default Gateway
+
+| VLAN | Interface | Default Gateway | Subnet Mask |
+|-------------|-----------|------------|-------------|
+| VLAN 10 | G0/1.10 | 192.168.10.254 | 255.255.255.0 | 
+| VLAN 20 | G0/1.20 | 192.168.20.1 | 255.255.255.252 | 
+| VLAN 30 | G0/1.30 | 192.168.30.2 | 255.255.255.252 | 
+| VLAN 40 | G0/1.40 | 192.168.40.254 | 255.255.255.0 | 
+| VLAN 50 | G0/1.50 | 192.168.50.254 | 255.255.255.0 | 
+| VLAN 60 | G0/1.60 | 192.168.60.254 | 255.255.255.0 | 
+| VLAN 100 | G0/1.100 | 192.168.100.254 | 255.255.255.0 | 
+| VLAN 200 | G0/1.200 | 192.168.200.254 | 255.255.255.0 | 
