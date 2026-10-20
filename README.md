@@ -26,13 +26,6 @@
 - VLAN 800 - UNUSED (SHUTDOWN)
 
 ---
-### Switch A (SW-A)
+### INTERFACES, IPv4 ADDRESSES, SUBNET MASK, DEFAULT GATEWAY:
 
----
-### Switch B (SW-B)
 
----
-### Switch C (SW-C)
-
----
-### Router (R1)
