@@ -24,21 +24,31 @@
 ---
 ### Switch - VLAN Interface Assignments
 
-| Switch | Interface(s) | Role |
-|--------|---------|------|
-| SW-A | F0/1 | Trunk to SW-B |
-| SW-A | F0/10-F0/14 | Access ports for VLANs 10, 20, 30 |
-| SW-A | F0/2-9, F0/15-24 | Shutdown |
-| SW-A | VLAN 200 | Remote Management (192.168.200.1) |
-| SW-C | F0/3 | Trunk to SW-B |
-| SW-C | F0/10-F0/14 | Access ports for VLANs 10, 40, 50/60 |
-| SW-C | F0/1-2, F0/4-9, F0/15-24 | Shutdown |
-| SW-C | VLAN 200 | Remote Management (192.168.200.3) |
-| SW-B | G0/1 | Trunk to Router 1 |
-| SW-B | F0/1 | Trunk to SW-A |
-| SW-B | F0/3 | Trunk to SW-C |
-| SW-B | G0/2, F0/2, F0/4-24 | Shutdown |
-| SW-B | VLAN 200 | Remote Management (192.168.200.2) |
+#### Switch A (SW-A)
+| Interface(s) | Role |
+|---------|------|
+| F0/1 | Trunk to SW-B |
+| F0/10-F0/14 | Access ports for VLANs 10, 20, 30 |
+| F0/2-9, F0/15-24 | Shutdown |
+| VLAN 200 | Remote Management (192.168.200.1) |
+
+
+#### Switch B (SW-B)
+| Interface(s) | Role |
+|---------|------|
+| G0/1 | Trunk to Router 1 |
+| F0/1 | Trunk to SW-A |
+| F0/3 | Trunk to SW-C |
+| G0/2, F0/2, F0/4-24 | Shutdown |
+| VLAN 200 | Remote Management (192.168.200.2) |
+
+#### Switch C (SW-C)
+| Interface(s) | Role |
+|---------|------|
+| F0/3 | Trunk to SW-B |
+| F0/10-F0/14 | Access ports for VLANs 10, 40, 50/60 |
+| F0/1-2, F0/4-9, F0/15-24 | Shutdown |
+| VLAN 200 | Remote Management (192.168.200.3) |
 
 ---
 ### Router: VLAN Default Gateway
