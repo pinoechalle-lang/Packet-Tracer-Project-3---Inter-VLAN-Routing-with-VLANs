@@ -21,6 +21,8 @@
 
 - VLAN 100 - Native
 
+- VLAn 200 - Remote Management
+
 - VLAN 800 - UNUSED (SHUTDOWN)
 
 ---
