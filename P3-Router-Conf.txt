@@ -1,0 +1,77 @@
+=============================================================================
+R1
+=============================================================================
+
+=============[ Escalate Mode ]=============
+
+enable
+configure terminal
+
+
+=============[ Basic Configurations ]=============
+
+hostname R1
+
+banner motd #
+--- Router: AUTHORIZED PERSONNEL ONLY! ---
+#
+
+no ip domain-lookup
+
+
+=============[ Enable Interface ]=============
+
+interface g0/1
+ description For Inter-VLAN: DO NOT SHUT
+ no shutdown
+exit
+
+
+=============[ Create Sub-Interfaces for all VLANs ]=============
+
+interface g0/1.10
+ description VLAN 10 - Guest
+ encapsulation dot1q 10
+ ip address 192.168.10.254 255.255.255.0
+exit
+
+interface g0/1.20
+ description VLAN 20 - Reception
+ encapsulation dot1q 20
+ ip address 192.168.20.254 255.255.255.0
+exit
+
+interface g0/1.30
+ description VLAN 30 - Staff/Maintenance
+ encapsulation dot1q 30
+ ip address 192.168.30.254 255.255.255.0
+exit
+
+interface g0/1.40
+ description VLAN 40 - Security
+ encapsulation dot1q 40
+ ip address 192.168.40.254 255.255.255.0
+exit
+
+interface g0/1.50
+ description VLAN 50 - Office
+ encapsulation dot1q 50
+ ip address 192.168.50.254 255.255.255.0
+exit
+
+interface g0/1.60
+ description VLAN 60 - Voice (IP Phone)
+ encapsulation dot1q 60
+ ip address 192.168.60.6 255.255.255.248
+exit
+
+interface g0/1.200
+ description VLAN 200 - Remote Management
+ encapsulation dot1q 200
+ ip address 192.168.200.254 255.255.255.0
+exit
+
+
+=============[ Save Configuration (Global Mode) ]=============
+
+do copy running-config startup-config
