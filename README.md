@@ -71,10 +71,12 @@
 
 ```bash
 show running-config
-show interfaces
+show ip interface brief
+show interfaces <interface>
 
 show vlan brief
-show trunk 
+
+show interfaces trunk
 ```
 
 Verifying if the network was configured correctly is extremely important, especially in complex set-ups such as these.
