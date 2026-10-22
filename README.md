@@ -133,6 +133,7 @@ Perform the following checks:
 4. Interface and IP status
 - Use `show ip interface brief` to verify the interfaces are active and have correct IP addresses.
 - Use `show interfaces <interface>` to check port status and confirm the interface is operational.
+- Use `show arp` in the router to check the Address Resolution Protocol table, which shows learned MAC-to-IP mappings. Helps you confirm whether the devices in the VLANs can communicate with the default gateway and that the router is resolving host addresses correctly.
 
 5. Connectivity and Inter-VLAN routing
 - Ping the default gateway of each VLAN to verify routing is working.
