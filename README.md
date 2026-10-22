@@ -79,24 +79,24 @@ show trunk
 
 Verifying if the network was configured correctly is extremely important, especially in complex set-ups such as these.
 
-Perform the following checks:
+#### Perform the following checks:
 
-VLAN verification
+A. VLAN verification
 - On each switch, the command show vlan brief was used to confirm that VLANs 10, 20, 30, 40, 50, 60, 100, and 200 were created and active.
 
 - The access ports assigned to each VLAN were checked to confirm that the correct interfaces were in the correct VLANs.
 
-Trunk verification
+B. Trunk verification
 - On the switches, the command show interfaces trunk was used to verify that the trunk links were up.
 
 - It was confirmed that the trunk ports carried the required VLANs and used VLAN 100 as the native VLAN.
 
-Router verification
+C. Router verification
 - On the router, the command show running-config was used to confirm the presence of the subinterfaces for VLANs 10, 20, 30, 40, 50, 60, and 200.
 
 - The command show interfaces g0/1.10, show interfaces g0/1.20, etc., was used to confirm that each subinterface had the correct IP address and was operational.
 
-Connectivity verification
+D. Connectivity verification
 - Ping the default gateway from any given VLAN to ensure that the default gateway is reachable.
 - Ping a PC from the same VLAN.
 - Ping a PC in a different VLAN to ensure that Inter-VLAN is working as intended.
