@@ -2,7 +2,7 @@
 
 ![Project 2 Screenshot](https://github.com/pinoechalle-lang/Packet-Tracer-Project-3---Inter-VLAN-Routing-with-VLANs/blob/main/Screenshot%202026-10-19%20165146.png?raw=true)
 
-##### This project simulates small scale and enterprise networks where segmenting network into smaller portions is often practiced or observed to maximize network security, and to make the whole network efficient by giving each department, office, or group its own broadcast domain while maximizing the use of the switches.
+##### This project simulates a small-scale enterprise network where segmenting the network into smaller logical groups is a common practice to improve security, reduce unnecessary broadcast traffic, and enhance overall network performance. Through the implementation of VLANs and Inter-VLAN Routing, each department, office, or user group is assigned its own broadcast domain while efficiently utilizing the available switching infrastructure. This approach reflects real-world network designs that prioritize scalability, manageability, and secure communication between different segments of the network.
 
 ## Requirements:
 Working as a part-time student in a small BPO office with two departments, you are tasked by the senior IT admin to logically segment a switch in each department into different LANs. Your senior IT admin has given you a list of predefined VLAN names, port ranges, and IP subnets, and you are told to refer to the list. 
