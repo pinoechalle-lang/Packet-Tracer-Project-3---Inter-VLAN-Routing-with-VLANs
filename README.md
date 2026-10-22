@@ -2,7 +2,7 @@
 
 ![Project 2 Screenshot](https://github.com/pinoechalle-lang/Packet-Tracer-Project-3---Inter-VLAN-Routing-with-VLANs/blob/main/Screenshot%202026-10-19%20165146.png?raw=true)
 
-#### Working as a part-time student in a small BPO office with two departments, you are tasked by the senior IT admin to logically segment a switch in each department into different LANs. You must trunk the switches to another switch that is directly connected to the company router, then enable communication between those different LANs to allow people in Department A and B to communicate with one another virtually. Additionally, all the switches must be configured to be remotely accessed by another IT employee working in both departments. The senior IT admin gave you a list of tables to follow.
+#### Working as a part-time student in a small BPO office with two departments, you are tasked by the senior IT admin to logically segment a switch in each department into different LANs. You must [...]
 
 ## Requirements:
 
@@ -68,6 +68,7 @@
 
 ### Verification
 
+Commands:
 
 ```bash
 show running-config
@@ -79,29 +80,67 @@ show vlan brief
 show interfaces trunk
 ```
 
-Verifying if the network was configured correctly is extremely important, especially in complex set-ups such as these.
+Explained:
 
-#### Perform the following checks:
+- `show running-config`
+  This command displays the full router or switch configuration. It is used to confirm that VLANs, trunk ports, IP addresses, and subinterfaces were configured correctly.
 
-A. VLAN verification
-- On each switch, the command show vlan brief was used to confirm that VLANs 10, 20, 30, 40, 50, 60, 100, and 200 were created and active.
+- `show ip interface brief`
+  This command shows the status of all interfaces and their IP addresses. It verifies whether the interfaces are up/up, assigned the correct IPs, and operational.
 
-- The access ports assigned to each VLAN were checked to confirm that the correct interfaces were in the correct VLANs.
+- `show interfaces <interface>`
+  This command displays detailed information about a specific interface, such as status, duplex, speed, and whether it is connected. In this project, it is used to check interfaces like:
+  - `show interfaces g0/1`
+  - `show interfaces g0/1.10`
+  - `show interfaces g0/1.20`
+  - `show interfaces g0/1.30`
+  - `show interfaces g0/1.40`
+  - `show interfaces g0/1.50`
+  - `show interfaces g0/1.60`
+  - `show interfaces g0/1.200`
 
-B. Trunk verification
-- On the switches, the command show interfaces trunk was used to verify that the trunk links were up.
+- `show vlan brief`
+  This command lists all VLANs that exist on the switch and shows which ports are assigned to each VLAN. It verifies that the required VLANs were created and assigned correctly.
 
-- It was confirmed that the trunk ports carried the required VLANs and used VLAN 100 as the native VLAN.
+- `show interfaces trunk`
+  This command confirms whether trunk ports are enabled and which VLANs are allowed across the trunk links. It verifies that inter-switch communication is functioning properly.
 
-C. Router verification
-- On the router, the command show running-config was used to confirm the presence of the subinterfaces for VLANs 10, 20, 30, 40, 50, 60, and 200.
+Perform the following checks:
 
-- The command show interfaces g0/1.10, show interfaces g0/1.20, etc., was used to confirm that each subinterface had the correct IP address and was operational.
+1. VLAN creation and assignment
+- Use `show vlan brief` to confirm that VLANs 10, 20, 30, 40, 50, 60, 100, and 200 exist.
+- Check that each access port is assigned to the correct VLAN.
+- Confirm that unused ports are assigned to VLAN 800 and shut down.
 
-D. Connectivity verification
-- Ping the default gateway from any given VLAN to ensure that the default gateway is reachable.
-- Ping a PC from the same VLAN.
-- Ping a PC in a different VLAN to ensure that Inter-VLAN is working as intended.
+2. Trunking configuration
+- Use `show interfaces trunk` to confirm that the trunk links between switches and the router are active.
+- Verify that all required VLANs are allowed on the trunk.
+- Confirm that VLAN 100 is used as the native VLAN.
 
+3. Router subinterface configuration
+- Use `show running-config` to confirm each subinterface was created:
+  - `g0/1.10`
+  - `g0/1.20`
+  - `g0/1.30`
+  - `g0/1.40`
+  - `g0/1.50`
+  - `g0/1.60`
+  - `g0/1.200`
+- Confirm each subinterface has the correct VLAN encapsulation and IP address.
 
+4. Interface and IP status
+- Use `show ip interface brief` to verify the interfaces are active and have correct IP addresses.
+- Use `show interfaces <interface>` to check port status and confirm the interface is operational.
+
+5. Connectivity and Inter-VLAN routing
+- Ping the default gateway of each VLAN to verify routing is working.
+- Example:
+  - `ping 192.168.10.254`
+  - `ping 192.168.20.254`
+  - `ping 192.168.30.254`
+  - `ping 192.168.40.254`
+  - `ping 192.168.50.254`
+  - `ping 192.168.60.6`
+  - `ping 192.168.200.254`
+- Successful replies confirm that the VLAN interfaces and router configuration are correct and that inter-VLAN communication is functioning.
 
