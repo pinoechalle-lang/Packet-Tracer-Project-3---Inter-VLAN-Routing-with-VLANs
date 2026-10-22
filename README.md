@@ -63,3 +63,18 @@
 | VLAN 60 | G0/1.60 | 192.168.60.6 | 255.255.255.248 | 
 | VLAN 100 | G0/1.100 | 192.168.100.254 | 255.255.255.0 | 
 | VLAN 200 | G0/1.200 | 192.168.200.254 | 255.255.255.0 | 
+
+---
+
+### Verification
+
+
+```bash
+show running-config
+show interfaces
+
+show vlan brief
+show trunk 
+``
+
+
