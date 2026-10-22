@@ -16,7 +16,7 @@ Working as a part-time student in a small BPO office with two departments, you a
 | VLAN 30 | Staff/Maintenance | 192.168.30.0 /24 | 
 | VLAN 40 | Security | 192.168.40.0 /24 | 
 | VLAN 50 | Office | 192.168.50.0 /24 | 
-| VLAN 60 | Voice | 192.168.60.0 /24 | 
+| VLAN 60 | Voice | 192.168.60.0 /29 | 
 | VLAN 100 | Native | 192.168.100.0 /24 | 
 | VLAN 200 | Remote_Management | 192.168.200.0 /24 |
 | VLAN 800 | UNUSED-SHUTDOWN | |
