@@ -78,6 +78,8 @@ show interfaces <interface>
 show vlan brief
 
 show interfaces trunk
+
+show ip arp              // Router
 ```
 
 Explained:
