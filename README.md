@@ -107,6 +107,9 @@ Explained:
 - `show interfaces trunk`
   This command confirms whether trunk ports are enabled and which VLANs are allowed across the trunk links. It verifies that inter-switch communication is functioning properly.
 
+- `show arp`
+  This command displays the Address Resolution Protocol table, which shows learned MAC-to-IP mappings. It confirms that devices in the VLANs can communicate with the default gateway and that the router is resolving host addresses correctly.
+
 Perform the following checks:
 
 1. VLAN creation and assignment
@@ -133,9 +136,10 @@ Perform the following checks:
 4. Interface and IP status
 - Use `show ip interface brief` to verify the interfaces are active and have correct IP addresses.
 - Use `show interfaces <interface>` to check port status and confirm the interface is operational.
-- Use `show arp` in the router to check the Address Resolution Protocol table, which shows learned MAC-to-IP mappings. Helps you confirm whether the devices in the VLANs can communicate with the default gateway and that the router is resolving host addresses correctly.
 
 5. Connectivity and Inter-VLAN routing
+- Use `show arp` to confirm that the correct MAC address is mapped to the correct IP address for devices in each VLAN.
+
 - Ping the default gateway of each VLAN to verify routing is working.
 - Example:
   - `ping 192.168.10.254`
