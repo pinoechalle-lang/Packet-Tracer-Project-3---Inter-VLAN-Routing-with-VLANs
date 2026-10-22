@@ -75,6 +75,7 @@ show interfaces
 
 show vlan brief
 show trunk 
-``
+```
+
 
 
